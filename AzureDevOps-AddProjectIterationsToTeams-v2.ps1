@@ -8,7 +8,7 @@ Write-Host "Initialize authentication context" -ForegroundColor Yellow
 $token = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($personalToken)"))
 $header = @{authorization = "Basic $token"}
 
-#Set the overall URL to be used
+#Set the overall URL to be used - This is an important step!
 $tfsBaseUrl = $orgUrl
 $projectiterations = ''
 
